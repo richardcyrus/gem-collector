@@ -15,5 +15,10 @@
     -   Assign new values to each of the crystal buttons.
     -   Reset the player's total score to zero.
 *   Track and display the number of games won and loss.
-*   The activites of the game -- choosing new numbers, assigning new values to the crystals, updating the score, updating the win/loss count, restarting the game -- should not trigger a full page refresh.
+*   The activities of the game -- choosing new numbers, assigning new values to the crystals, updating the score, updating the win/loss count, restarting the game -- should not trigger a full page refresh.
 *   Use jQuery to complete the JavaScript/HTML updates.
+
+
+# Credits
+
+The Gem images used in the buttons are from [https://icons8.com](https://icons8.com/license/)

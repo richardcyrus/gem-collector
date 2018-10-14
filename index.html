@@ -9,7 +9,47 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-
+<section class="game__crystal-collector">
+    <div class="score-board">
+        <div class="score-board__block">
+            <div class="score-board__block-number games__won"></div>
+            <div class="score-board__block-string">Gems Collected</div>
+        </div>
+        <div class="score-board__block">
+            <div class="score-board__block-number games__lost"></div>
+            <div class="score-board__block-string">Losses</div>
+        </div>
+    </div>
+    <header class="game__title">
+        <h1>Gem Collector!</h1>
+    </header>
+    <div class="game__instructions">
+        <h2>How to Play</h2>
+        <ul class="game__steps">
+            <li>When the game begins, you'll be shown a number.</li>
+            <li>Each of the crystals below have a point value assigned to them.</li>
+            <li>To win the game, you will need to use the points assigned to each crystal to match the target amount.</li>
+            <li>You lose if you go over the target amount.</li>
+            <li>On each start of the game, the target number and the values assigned to each crystal will change.</li>
+        </ul>
+    </div>
+    <div id="gem-display"></div>
+    <section class="game-tracker">
+        <div class="game-tracker__block">
+            <div class="game-tracker__block-number game__target-number"></div>
+            <div class="game-tracker__block-string">Target Number</div>
+        </div>
+        <div class="game-tracker__block">
+            <div class="game-tracker__block-number game__total-score"></div>
+            <div class="game-tracker__block-string">Total Score</div>
+        </div>
+    </section>
+    <div class="timer__overlay">
+        <h1 class="timer__message"></h1>
+        <p class="timer__patience">Game play will resume in...</p>
+        <p class="timer__time-left"></p>
+    </div>
+</section>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/app.js"></script>
 </body>

@@ -1,0 +1,192 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+}
+
+@-webkit-keyframes winner {
+  0% {
+    color: #8ea604;
+  }
+  25% {
+    color: #f5bb00;
+  }
+  50% {
+    color: #ec9f05;
+  }
+  75% {
+    color: #d76a03;
+  }
+  100% {
+    color: #bf3100;
+  }
+}
+
+@keyframes winner {
+  0% {
+    color: #8ea604;
+  }
+  25% {
+    color: #f5bb00;
+  }
+  50% {
+    color: #ec9f05;
+  }
+  75% {
+    color: #d76a03;
+  }
+  100% {
+    color: #bf3100;
+  }
+}
+
+.game__crystal-collector {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.651);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.game__title {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.game__title h1 {
+  margin: 0 0 1.5rem 0;
+}
+
+.score-board,
+.game-tracker {
+  align-items: center;
+  background: #dedede;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  justify-content: space-around;
+  width: 400px;
+}
+
+.score-board__block,
+.game-tracker__block {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  height: 100%;
+  justify-content: center;
+  width: 100px;
+}
+
+.score-board__block-number,
+.game-tracker__block-number {
+  color: #000;
+  font-size: 2rem;
+}
+
+.score-board__block-string,
+.game-tracker__block-string {
+  color: #807f7f;
+  font-size: 0.8rem;
+  line-height: 2rem;
+}
+
+.game__instructions {
+  margin: 1.5rem 0 1rem 0;
+}
+
+.game__instructions > h2 {
+  margin-bottom: 0;
+}
+
+.gem-button {
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  padding: 1rem;
+  margin: 1rem;
+  width: 96px;
+  height: 96px;
+}
+
+.gem-button__emerald {
+  background-image: url("../images/emerald.png");
+}
+
+.gem-button__ruby {
+  background-image: url("../images/ruby.png");
+}
+
+.gem-button__sapphire {
+  background-image: url("../images/sapphire.png");
+}
+
+.gem-button__topaz {
+  background-image: url("../images/topaz.png");
+}
+
+.game-won {
+  -webkit-animation-name: winner;
+          animation-name: winner;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.game-lost {
+  color: #9e0019;
+}
+
+.timer__overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  flex-direction: column;
+  flex: 1;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 2;
+}
+
+.timer__message {
+  font-size: 9rem;
+}
+
+.timer__patience {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.timer__time-left {
+  font-size: 10rem;
+  font-weight: 400;
+  margin: 0;
+  position: relative;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.05);
+}
