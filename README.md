@@ -22,3 +22,7 @@
 # Credits
 
 The Gem images used in the buttons are from [https://icons8.com](https://icons8.com/license/)
+
+- The background image is from [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/ "Subtle Patterns").
+    - The image used on this site is [Pow Star](https://www.toptal.com/designers/subtlepatterns/?s=pow_star).
+    - The images from [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/ "Subtle Patterns") use the following [license](https://creativecommons.org/licenses/by-sa/3.0/ "Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)")

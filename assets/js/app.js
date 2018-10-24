@@ -28,6 +28,21 @@
     let currentScore = 0;
 
     /**
+     * Get a random number between start and end.
+     *
+     * Here the + 1 accounts for the rounding down of Math.floor().
+     *
+     * @see https://www.codecademy.com/en/forum_questions/5198adbdbbeddf9726000700
+     *
+     * @param start
+     * @param end
+     * @returns {number}
+     */
+    function getRandomNumber(start, end) {
+        return Math.floor(Math.random() * ((end - start) + 1) + start);
+    }
+
+    /**
      * A JavaScript object to represent the Crystal Collector game.
      */
     const Game = {
@@ -47,12 +62,23 @@
 
         /**
          * Trigger game start.
+         *
+         * We set `bind` on page load. Since we are using delegate
+         * event registration, if we call bind each time the game
+         * resets, we end up with the clicks multiplying as the
+         * game progresses. (Didn't make sense at first why I would click
+         * a gem and get a value of 33 when the range is 1 - 12.)
+         *
+         * @param {boolean} bind Is this page load?
          */
-        start: function () {
+        start: function (bind = false) {
             this.generateGemNumbers();
             this.targetNumber = this.generateTargetNumber();
             this.startPlay();
-            this.bind();
+
+            if (bind) {
+                this.bind();
+            }
         },
 
         /**
@@ -60,15 +86,14 @@
          * target number chosen by the computer, and game statistics.
          */
         startPlay: function( ) {
-            let idx = 0;
             for (let gem of this.gems) {
                 const name = `gem-button__${gem}`;
 
                 const button = $('<button>')
                     .addClass(`gem-button ${name}`)
-                    .attr('data-gem-value', this.uniqueGemValues[idx]);
+                    .attr('data-gem-value', this.uniqueGemValues.shift());
+
                 this.elGemDisplay.append(button);
-                idx++;
             }
 
             this.elGamesWon.text(numberOfWins);
@@ -85,10 +110,8 @@
          */
         bind: function () {
             /**
-             * This allows the use of `this` to refer to the `Game`
-             * object in the playerClick method, but also get the
-             * element that was clicked by passing the `event`
-             * object to the `playerClick` method.
+             * `$.proxy` allows us to define the meaning of `this`
+             * in the playerClick method.
              */
             this.elGemDisplay.on(
                 'click', '.gem-button', $.proxy(this.playerClick, this)
@@ -104,7 +127,7 @@
          */
         generateGemNumbers: function() {
             while (this.uniqueGemValues.length < 4) {
-                const random = Math.floor(Math.random() * 12) + 1;
+                const random = getRandomNumber(1, 12);
 
                 if (! this.uniqueGemValues.includes(random)) {
                     this.uniqueGemValues.push(random);
@@ -119,7 +142,7 @@
          * @returns {number}
          */
         generateTargetNumber: function() {
-            return Math.floor(Math.random() * 120) + 19;
+            return getRandomNumber(19, 120);
         },
 
         /**
@@ -231,9 +254,8 @@
 
             this.elTimerTimeLeft.text(timeLeft);
         }
-
     };
 
-    Game.start();
+    Game.start(true);
 
 })(jQuery);

@@ -1,6 +1,12 @@
 html {
+  -ms-overflow-style: scrollbar;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
+  font-family: sans-serif;
   font-size: 100%;
+  line-height: 1.15;
 }
 
 *, *:before, *:after {
@@ -8,6 +14,13 @@ html {
 }
 
 body {
+  background: url("../images/pow-star.png") repeat;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  height: 100vh;
+  line-height: 1.5;
   margin: 0;
   text-align: center;
 }
@@ -50,7 +63,7 @@ body {
 
 .game__crystal-collector {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.651);
+  background-color: rgba(95, 158, 160, 0.3);
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -67,20 +80,18 @@ body {
   margin: 0 0 1.5rem 0;
 }
 
-.score-board,
-.game-tracker {
+.score-board {
   align-items: center;
-  background: #dedede;
+  background: #fff;
   border-radius: 8px;
   display: flex;
   flex-direction: row;
   height: 100px;
   justify-content: space-around;
-  width: 400px;
+  width: 600px;
 }
 
-.score-board__block,
-.game-tracker__block {
+.score-board__block {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -90,17 +101,15 @@ body {
   width: 100px;
 }
 
-.score-board__block-number,
-.game-tracker__block-number {
+.score-board__block-number {
   color: #000;
   font-size: 2rem;
 }
 
-.score-board__block-string,
-.game-tracker__block-string {
+.score-board__block-string {
   color: #807f7f;
   font-size: 0.8rem;
-  line-height: 2rem;
+  line-height: 1.15;
 }
 
 .game__instructions {
@@ -111,9 +120,11 @@ body {
   margin-bottom: 0;
 }
 
+.game__steps {
+  text-align: left;
+}
+
 .gem-button {
-  background-size: cover;
-  background-position: center;
   background-color: transparent;
   display: inline-block;
   border: none;
@@ -175,15 +186,17 @@ body {
 }
 
 .timer__message {
-  font-size: 9rem;
+  font-size: 5rem;
 }
 
 .timer__patience {
+  color: #fff;
   font-size: 1.5rem;
   text-transform: uppercase;
 }
 
 .timer__time-left {
+  color: #fff;
   font-size: 10rem;
   font-weight: 400;
   margin: 0;
