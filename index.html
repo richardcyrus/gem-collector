@@ -1,54 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystal Collector</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-<body>
-<section class="game__crystal-collector">
-    <header class="game__title">
-        <h1>Gem Collector!</h1>
-    </header>
-    <div class="score-board">
-        <div class="score-board__block">
-            <div class="score-board__block-number game__target-number"></div>
-            <div class="score-board__block-string">Target Number</div>
-        </div>
-        <div class="score-board__block">
-            <div class="score-board__block-number game__total-score"></div>
-            <div class="score-board__block-string">Total Score</div>
-        </div>
-        <div class="score-board__block">
-            <div class="score-board__block-number games__won"></div>
-            <div class="score-board__block-string">Gems Collected</div>
-        </div>
-        <div class="score-board__block">
-            <div class="score-board__block-number games__lost"></div>
-            <div class="score-board__block-string">Losses</div>
-        </div>
-    </div>
-    <div class="game__instructions">
-        <h2>How to Play</h2>
-        <ol class="game__steps">
-            <li>The goal is to match the number shown above as the Target Number.</li>
-            <li>Each of the gems below have a point value assigned to them.</li>
-            <li>As you click on each gem, the points will be added to your total score.</li>
-            <li>To win the game, you will need to use the points assigned to each gem to match the Target Number.</li>
-            <li>You lose if you go over the Target Number.</li>
-            <li>After each win or loss, the Target Number and the values assigned to each gem will change.</li>
-        </ol>
-    </div>
-    <div id="gem-display"></div>
-    <div class="timer__overlay">
-        <h1 class="timer__message"></h1>
-        <p class="timer__patience">Game play will resume in...</p>
-        <p class="timer__time-left"></p>
-    </div>
-</section>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/app.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Crystal Collector</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    </head>
+    <body>
+        <section class="game__crystal-collector">
+            <header class="game__title">
+                <h1>Gem Collector!</h1>
+            </header>
+            <div class="score-board">
+                <div class="score-board__block">
+                    <div
+                        class="score-board__block-number game__target-number"
+                    ></div>
+                    <div class="score-board__block-string">Target Number</div>
+                </div>
+                <div class="score-board__block">
+                    <div
+                        class="score-board__block-number game__total-score"
+                    ></div>
+                    <div class="score-board__block-string">Total Score</div>
+                </div>
+                <div class="score-board__block">
+                    <div class="score-board__block-number games__won"></div>
+                    <div class="score-board__block-string">Gems Collected</div>
+                </div>
+                <div class="score-board__block">
+                    <div class="score-board__block-number games__lost"></div>
+                    <div class="score-board__block-string">Losses</div>
+                </div>
+            </div>
+            <div class="game__instructions">
+                <h2>How to Play</h2>
+                <ol class="game__steps">
+                    <li>
+                        The goal is to match the number shown above as the
+                        Target Number.
+                    </li>
+                    <li>
+                        Each of the gems below have a point value assigned to
+                        them.
+                    </li>
+                    <li>
+                        As you click on each gem, the points will be added to
+                        your total score.
+                    </li>
+                    <li>
+                        To win the game, you will need to use the points
+                        assigned to each gem to match the Target Number.
+                    </li>
+                    <li>You lose if you go over the Target Number.</li>
+                    <li>
+                        After each win or loss, the Target Number and the values
+                        assigned to each gem will change.
+                    </li>
+                </ol>
+            </div>
+            <div id="gem-display"></div>
+            <div class="timer__overlay">
+                <h1 class="timer__message"></h1>
+                <p class="timer__patience">Game play will resume in...</p>
+                <p class="timer__time-left"></p>
+            </div>
+        </section>
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script type="text/javascript" src="assets/js/app.js"></script>
+    </body>
 </html>
